@@ -1,7 +1,8 @@
-site_name: My MkDocs Material Documentation
+site_name: Documentación General
 site_url: https://sitename.example
 theme:
   name: material
+  language: es
   font:
     text: Merriweather Sans
     code: Red Hat Mono
@@ -27,12 +28,12 @@ theme:
         name: Light mode
       primary: blue
       accent: deep orange
+
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -49,6 +50,11 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
+extra:
+  social:
+    - icon: fontawesome/brands/mastodon 
+      link: https://fosstodon.org/@squidfunk
+
 # extra:
 #   social:
 #     - icon: simple/youtube
@@ -56,4 +62,31 @@ markdown_extensions:
 #     - icon: simple/linkedin
 #       link: https://linkedin.com/in/willettjames
 
-copyright: Copyright &copy; 2024 James Willett
+copyright: Copyright &copy; 2025 Miguel Ayte
+
+nav:
+  - Home: index.md
+  - Data Warehouse:
+      - ETL:
+          - Introducción: proyectos/etl/index.md
+          - ER vw_Producto: data-warehouse/etl/ER-vw_Producto.md
+      - Reportes:
+          - VDM:
+              - Introducción: data-warehouse/reportes/vdm/index.md
+              - Diagrama de Flujo: data-warehouse/reportes/vdm/flujo.md
+              - Modelo Entidad-Relación: data-warehouse/reportes/vdm/entidades.md
+
+
+# nav:
+#   - Home: index.md
+#   - Data Warehouse:
+#       - Introducción: data-warehouse/introduccion.md
+#       - Modelado de Datos: data-warehouse/modelado-de-datos.md
+#       - ETL: data-warehouse/etl.md
+#       - Diagramas: 
+#           - 1. Actualizar Costos SAP: data-warehouse/step-1-actualizar-costos-sap.md
+#           - 2. Venta Diaria del Mes: data-warehouse/step-2-venta-diaria-del-mes.md
+
+plugins:
+  - search
+  - mermaid2
