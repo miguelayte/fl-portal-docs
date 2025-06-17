@@ -31,6 +31,10 @@ theme:
 
 markdown_extensions:
   - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 2 
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -44,6 +48,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
+          #format: pymdownx.superfences.fence_div_format
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
@@ -54,6 +59,24 @@ extra:
   social:
     - icon: fontawesome/brands/mastodon 
       link: https://fosstodon.org/@squidfunk
+
+extra_javascript:
+  - assets/js/mermaid-export.js
+
+# extra_javascript:
+#   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+#   - assets/js/copy-mermaid.js
+
+extra_css:
+  - assets/css/custom.css
+
+
+# extra_css:
+#   - assets/css/custom.css
+# extra_javascript:
+#   - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+#   - assets/js/copy-mermaid.js
+
 
 # extra:
 #   social:
@@ -68,11 +91,20 @@ nav:
   - Home: index.md
   - Data Warehouse:
       - ETL:
-          - Introducción: proyectos/etl/index.md
-          - ER vw_Producto: data-warehouse/etl/ER-vw_Producto.md
+          #- Carga de Catálogos:
+          - Carga de Ventas:
+              - DFD carga de ventas sin transformación: data-warehouse/etl/ventas/usp_jo_pos_dw_ventas_actualizar.md
+              - DFD carga de ventas con transformación: data-warehouse/etl/ventas/usp_jo_pos_dw_cubo_actualizar.md
+      - Vistas:
+          - vw_Producto: data-warehouse/vistas/ER-vw_Producto.md
+          - vw_proyecciones_TY: data-warehouse/vistas/ER-vw_proyecciones_TY.md
       - Reportes:
-          - VDM:
-              - Introducción: data-warehouse/reportes/vdm/index.md
+          - ACH Avance de Cuotas de Hoy:
+              - Código: data-warehouse/reportes/ach/codigo.md
+              - Diagrama de Flujo: data-warehouse/reportes/ach/flujo.md
+              - Modelo Entidad-Relación: data-warehouse/reportes/ach/entidades.md
+          - VDM Ventas Diarias del Mes:
+              - Código: data-warehouse/reportes/vdm/codigo.md
               - Diagrama de Flujo: data-warehouse/reportes/vdm/flujo.md
               - Modelo Entidad-Relación: data-warehouse/reportes/vdm/entidades.md
 
@@ -89,4 +121,4 @@ nav:
 
 plugins:
   - search
-  - mermaid2
+#   - mermaid2

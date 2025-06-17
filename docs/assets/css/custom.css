@@ -1,0 +1,70 @@
+/* Estilos para contenedores Mermaid */
+.mermaid-container, pre.mermaid {
+    position: relative;
+    padding-top: 40px !important;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    background: white;
+    border: 1px solid #e1e4e8;
+    min-height: 100px;
+}
+
+.mermaid-container::before, pre.mermaid::before {
+    content: 'Diagrama Mermaid';
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Contenedor de botones */
+.mermaid-btn-container {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    display: flex;
+    gap: 6px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 6px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Estilos para botones */
+.mermaid-btn-container button {
+    transition: all 0.25s ease;
+    height: 26px;
+    opacity: 0.95;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.mermaid-btn-container button:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.copy-mermaid-btn {
+    background: #1976d2 !important;
+}
+
+.download-mermaid-btn {
+    background: #7b1fa2 !important;
+}
+
+.view-mermaid-btn {
+    background: #d32f2f !important;
+}
+
+/* Asegurar que el SVG sea visible */
+.mermaid svg, .mermaid-container svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}

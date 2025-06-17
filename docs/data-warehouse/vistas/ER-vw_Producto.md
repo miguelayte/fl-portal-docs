@@ -1,21 +1,21 @@
-# Diagrama de Entidad Relación para vw_Producto:
+## 1. Diagrama de Entidad Relación
 
 ```mermaid
 erDiagram
     producto ||--o{ tb_clasificacion : "INNER JOIN"
-    producto ||--o| descripcionprincipal : "LEFT JOIN"
-    producto ||--o| marca : "LEFT JOIN"
-    producto ||--o| categoria : "LEFT JOIN"
-    producto ||--o| compradoraCombinacion : "LEFT JOIN"
-    producto ||--o| tmp_alm_stock_producto : "LEFT JOIN"
-    producto ||--o| color : "LEFT JOIN"
-    producto ||--o| linea : "LEFT JOIN"
-    producto ||--o| material : "LEFT JOIN"
-    producto ||--o| modelo : "LEFT JOIN"
-    producto ||--o| talla : "LEFT JOIN"
-    producto ||--o| temporada : "LEFT JOIN"
-    producto ||--o| tipoarticulo : "LEFT JOIN"
-    producto ||--o| tb_product_manager : "LEFT JOIN"
+    producto ||--o{ descripcionprincipal : "LEFT JOIN"
+    producto ||--o{ marca : "LEFT JOIN"
+    producto ||--o{ categoria : "LEFT JOIN"
+    producto ||--o{ compradoraCombinacion : "LEFT JOIN"
+    producto ||--o{ tmp_alm_stock_producto : "LEFT JOIN"
+    producto ||--o{ color : "LEFT JOIN"
+    producto ||--o{ linea : "LEFT JOIN"
+    producto ||--o{ material : "LEFT JOIN"
+    producto ||--o{ modelo : "LEFT JOIN"
+    producto ||--o{ talla : "LEFT JOIN"
+    producto ||--o{ temporada : "LEFT JOIN"
+    producto ||--o{ tipoarticulo : "LEFT JOIN"
+    producto ||--o{ tb_product_manager : "LEFT JOIN"
     marca ||--o{ compradoraCombinacion : "tipomarca2"
     descripcionprincipal ||--o{ compradoraCombinacion : "grupo"
     categoria ||--o{ compradoraCombinacion : "catgroup"
@@ -58,7 +58,7 @@ erDiagram
         string estilo
         string ocasion
         string detalle_planta
-        string campańa
+        string campaña
         string mesq
         string tec_planta
         string tec_plantilla
@@ -150,10 +150,13 @@ erDiagram
         string PRODUCT_MANAGER
     }
 ```
-### **Notas importantes sobre el diagrama**
-1. La entidad principal es `producto` que se relaciona con múltiples tablas de referencia
-2. Se muestran las relaciones INNER JOIN (con tb_clasificacion) y LEFT JOIN (con las demás tablas)
-3. La tabla compradoraCombinacion tiene una relación compuesta con marca, descripcionprincipal y categoria
-4. La tabla tb_product_manager tiene una relación compuesta con múltiples campos de otras tablas
-5. Se incluyen los campos PK (Primary Key) y FK (Foreign Key) relevantes
-6. La vista filtra productos donde temporada > '61' y excluye los productos listados en tb_productos_excluidos
+??? info "Notas importantes sobre el diagrama"
+    ## **2. Notas importantes sobre el diagrama**
+    1. La entidad principal es `producto` que se relaciona con múltiples tablas de referencia
+    2. Se muestran las relaciones INNER JOIN (con tb_clasificacion) y LEFT JOIN (con las demás tablas)
+    3. La tabla compradoraCombinacion tiene una relación compuesta con marca, descripcionprincipal y categoria
+    4. La tabla tb_product_manager tiene una relación compuesta con múltiples campos de otras tablas
+    5. Se incluyen los campos PK (Primary Key) y FK (Foreign Key) relevantes
+    6. La vista filtra productos donde temporada > '61' y excluye los productos listados en tb_productos_excluidos
+
+

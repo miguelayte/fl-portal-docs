@@ -1,4 +1,4 @@
-# DIAGRAMA DE FLUJO DEL PROCESO VDM:
+# DIAGRAMA DE FLUJO DEL PROCESO DE VENTAS DIARIAS DEL MES:
 ```mermaid
 flowchart TD
     A[Inicio] --> B[Declarar variables]
@@ -34,7 +34,6 @@ flowchart TD
 ```
 
 ---
-
 ### 🧭 **Descripción General**
 
 Este flujo representa el proceso automatizado de generación y envío de un reporte de ventas (VDM) por correo electrónico. El proceso incluye la preparación de datos, procesamiento analítico, generación de reportes HTML y envío de resultados.
