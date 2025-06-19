@@ -38,5 +38,5 @@
         DATEADD(YEAR, -1, DATEADD(MONTH, DATEDIFF(MONTH, 0, @fec), 0)) AS FechaIniLY,
         DATEADD(YEAR, -1, EOMONTH(@fec)) AS FechaFinLY,
         FORMAT(DATEADD(YEAR, -1, DATEADD(MONTH, DATEDIFF(MONTH, 0, @fec), 0)), 'yyyyMMdd') AS FechaIniSFLY,
-        FORMAT(DATEADD(YEAR, -1, EOMONTH(@fec)),
+        FORMAT(DATEADD(YEAR, -1, EOMONTH(@fec)), 'yyyyMMdd') as FechaFinSFLY
     ```
