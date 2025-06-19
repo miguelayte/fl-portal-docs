@@ -88,25 +88,76 @@ extra_css:
 copyright: Copyright &copy; 2025 Miguel Ayte
 
 nav:
-  - Home: index.md
-  - Data Warehouse:
-      - ETL:
-          #- Carga de Catálogos:
-          - Carga de Ventas:
-              - DFD carga de ventas sin transformación: data-warehouse/etl/ventas/usp_jo_pos_dw_ventas_actualizar.md
-              - DFD carga de ventas con transformación: data-warehouse/etl/ventas/usp_jo_pos_dw_cubo_actualizar.md
-      - Vistas:
-          - vw_Producto: data-warehouse/vistas/ER-vw_Producto.md
-          - vw_proyecciones_TY: data-warehouse/vistas/ER-vw_proyecciones_TY.md
-      - Reportes:
-          - ACH Avance de Cuotas de Hoy:
-              - Código: data-warehouse/reportes/ach/codigo.md
-              - Diagrama de Flujo: data-warehouse/reportes/ach/flujo.md
-              - Modelo Entidad-Relación: data-warehouse/reportes/ach/entidades.md
-          - VDM Ventas Diarias del Mes:
-              - Código: data-warehouse/reportes/vdm/codigo.md
-              - Diagrama de Flujo: data-warehouse/reportes/vdm/flujo.md
-              - Modelo Entidad-Relación: data-warehouse/reportes/vdm/entidades.md
+  - Inicio: index.md
+
+  - Procesos:
+      - Data Warehouse:
+          - ETL:
+              - Carga de Ventas:
+                  - Sin transformación: procesos/data-warehouse/etl/ventas/usp_jo_pos_dw_ventas_actualizar.md
+                  - Con transformación: procesos/data-warehouse/etl/ventas/usp_jo_pos_dw_cubo_actualizar.md
+          - Vistas:
+              - vw_Producto: procesos/data-warehouse/vistas/ER-vw_Producto.md
+              - vw_proyecciones_TY: procesos/data-warehouse/vistas/ER-vw_proyecciones_TY.md
+          - Reportes:
+              - ACH - Avance de Cuotas:
+                  - Código: procesos/data-warehouse/reportes/ach/codigo.md
+                  - Diagrama de Flujo: procesos/data-warehouse/reportes/ach/flujo.md
+                  - Modelo Entidad-Relación: procesos/data-warehouse/reportes/ach/entidades.md
+              - VDM - Ventas Diarias del Mes:
+                  - Código: procesos/data-warehouse/reportes/vdm/codigo.md
+                  - Diagrama de Flujo: procesos/data-warehouse/reportes/vdm/flujo.md
+                  - Modelo Entidad-Relación: procesos/data-warehouse/reportes/vdm/entidades.md
+
+  - Proyectos:
+      - Mejora SP VDM:
+          - Descripción: proyectos/mejora-sp-vdm/descripcion.md
+          - Avances: proyectos/mejora-sp-vdm/avances.md
+          - Documentos Técnicos:
+              - FN nuevos: proyectos/mejora-sp-vdm/documentos-tecnicos/fn-nuevos.md
+              - SP nuevos: proyectos/mejora-sp-vdm/documentos-tecnicos/sp-nuevos.md
+              - Entidades nuevas: proyectos/mejora-sp-vdm/documentos-tecnicos/entidades-nuevas.md
+              - Entidades modificadas: proyectos/mejora-sp-vdm/documentos-tecnicos/entidades-modificadas.md
+              - Lista de Comprobación de Pruebas: proyectos/mejora-sp-vdm/documentos-tecnicos/lista-mejoras.md
+              - Documentos de Pase a Producción: proyectos/mejora-sp-vdm/documentos-tecnicos/pase-produccion.md
+
+  - Servicios:
+      - Catálogo de Servicios: servicios/catalogo.md
+      - Integraciones: servicios/integraciones.md
+
+  - Aplicaciones:
+      - Aplicación de Ventas: aplicaciones/ventas.md
+      - Aplicación de Inventario: aplicaciones/inventario.md
+
+
+
+
+# nav:
+#   - Home: index.md
+#   - Data Warehouse:
+#       - ETL:
+#           #- Carga de Catálogos:
+#           - Carga de Ventas:
+#               - DFD carga de ventas sin transformación: data-warehouse/etl/ventas/usp_jo_pos_dw_ventas_actualizar.md
+#               - DFD carga de ventas con transformación: data-warehouse/etl/ventas/usp_jo_pos_dw_cubo_actualizar.md
+#       - Vistas:
+#           - vw_Producto: data-warehouse/vistas/ER-vw_Producto.md
+#           - vw_proyecciones_TY: data-warehouse/vistas/ER-vw_proyecciones_TY.md
+#       - Reportes:
+#           - ACH Avance de Cuotas de Hoy:
+#               - Código: data-warehouse/reportes/ach/codigo.md
+#               - Diagrama de Flujo: data-warehouse/reportes/ach/flujo.md
+#               - Modelo Entidad-Relación: data-warehouse/reportes/ach/entidades.md
+#           - VDM Ventas Diarias del Mes:
+#               - Código Actual: data-warehouse/reportes/vdm/codigo-actual.md
+#               - Diagrama de Flujo: data-warehouse/reportes/vdm/flujo.md
+#               - Modelo Entidad-Relación: data-warehouse/reportes/vdm/entidades.md
+#               - Mejoras:
+#                   - Lista de Mejoras: data-warehouse/reportes/vdm/mejoras/lista-mejoras.md
+#                   - Nuevas Tablas Config: data-warehouse/reportes/vdm/mejoras/tablas-de-configuracion.md
+#                   - Vista vw_Producto: data-warehouse/reportes/vdm/mejoras/vw_Producto.md
+#                   - SP VDM_get_fechas: data-warehouse/reportes/vdm/mejoras/VDM_get_fechas.md
+#                   - Modelo Entidad-Relación Mejorado: data-warehouse/reportes/vdm/mejoras/entidades-mejoradas.md
 
 
 # nav:

@@ -1,7 +1,7 @@
 # DIAGRAMA ENTIDAD RELACION DEL PROCESO VENTAS DIARIAS DEL MES:
 
-[🔍 Ver VW_PRODUCTO](/data-warehouse/etl/vistas/ER-vw_Producto/){target=_blank}
-[🔍 Ver VW_PROYECCIONES_TY](/data-warehouse/etl/vistas/ER-vw_proyecciones_TY/){target=_blank}
+[🔍 Ver VW_PRODUCTO](/procesos/data-warehouse/vistas/ER-vw_Producto/){target=_blank}
+[🔍 Ver VW_PROYECCIONES_TY](/procesos/data-warehouse/vistas/ER-vw_proyecciones_TY/){target=_blank}
 
 ```mermaid
 erDiagram

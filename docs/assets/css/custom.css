@@ -68,3 +68,72 @@
     margin: 0 auto;
     max-width: 100%;
 }
+
+/* Estados */
+.estado-pendiente {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.estado-proceso {
+  background-color: #cce5ff;
+  color: #004085;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.estado-completado {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.estado-cancelado {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Estilos personalizados para Footloose */
+:root {
+  --md-primary-fg-color: #e60012;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #e60012;
+  --md-default-bg-color: #f5f5f5;
+  --md-typeset-color: #222222;
+  --md-typeset-a-color: #e60012;
+  --md-footer-bg-color: #222222;
+  --md-footer-fg-color: #ffffff;
+  --md-code-bg-color: #f5f5f5;
+  --md-code-fg-color: #222222;
+}
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #e60012;
+  --md-primary-bg-color: #222222;
+  --md-accent-fg-color: #e60012;
+  --md-default-bg-color: #222222;
+  --md-typeset-color: #ffffff;
+  --md-typeset-a-color: #e60012;
+  --md-footer-bg-color: #111111;
+  --md-footer-fg-color: #ffffff;
+  --md-code-bg-color: #444444;
+  --md-code-fg-color: #ffffff;
+}
+
+/* Header principal con morado Footloose */
+.md-header, .md-header__inner, .md-header__button, .md-header__title {
+  background-color: #6c217a !important;
+  color: #fff !important;
+  border: none !important;
+}
+.md-header__button, .md-header__title {
+  color: #fff !important;
+}
+.md-header__topic {
+  color: #fff !important;
+}
