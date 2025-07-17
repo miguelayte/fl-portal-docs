@@ -1,0 +1,303 @@
+/* Estilos para contenedores Mermaid */
+.mermaid-container, pre.mermaid {
+    position: relative;
+    padding-top: 40px !important;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    background: white;
+    border: 1px solid #e1e4e8;
+    min-height: 100px;
+}
+
+.mermaid-container::before, pre.mermaid::before {
+    content: 'Diagrama Mermaid';
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Contenedor de botones */
+.mermaid-btn-container {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    display: flex;
+    gap: 6px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 6px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Estilos para botones */
+.mermaid-btn-container button {
+    transition: all 0.25s ease;
+    height: 26px;
+    opacity: 0.95;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.mermaid-btn-container button:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.copy-mermaid-btn {
+    background: #1976d2 !important;
+}
+
+.download-mermaid-btn {
+    background: #7b1fa2 !important;
+}
+
+.view-mermaid-btn {
+    background: #d32f2f !important;
+}
+
+/* Asegurar que el SVG sea visible */
+.mermaid svg, .mermaid-container svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Estados */
+.estado-pendiente {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.estado-proceso {
+  background-color: #cce5ff;
+  color: #004085;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.estado-completado {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.estado-cancelado {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Estilos personalizados para Footloose */
+:root {
+  --md-primary-fg-color: #e60012;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #e60012;
+  --md-default-bg-color: #f5f5f5;
+  --md-typeset-color: #222222;
+  --md-typeset-a-color: #e60012;
+  --md-footer-bg-color: #222222;
+  --md-footer-fg-color: #ffffff;
+  --md-code-bg-color: #f5f5f5;
+  --md-code-fg-color: #222222;
+}
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #e60012;
+  --md-primary-bg-color: #222222;
+  --md-accent-fg-color: #e60012;
+  --md-default-bg-color: #222222;
+  --md-typeset-color: #ffffff;
+  --md-typeset-a-color: #e60012;
+  --md-footer-bg-color: #111111;
+  --md-footer-fg-color: #ffffff;
+  --md-code-bg-color: #444444;
+  --md-code-fg-color: #ffffff;
+}
+
+/* Header principal con morado Footloose */
+.md-header, .md-header__inner, .md-header__button, .md-header__title {
+  background-color: #6c217a !important;
+  color: #fff !important;
+  border: none !important;
+}
+.md-header__button, .md-header__title {
+  color: #fff !important;
+}
+.md-header__topic {
+  color: #fff !important;
+}
+
+/* Reduce el ancho de la primera columna (ID) y amplía la última */
+.md-typeset table th:first-child,
+.md-typeset table td:first-child {
+  min-width: 40px;
+  max-width: 60px;
+  width: 60px;
+  text-align: center;
+  white-space: nowrap;
+}
+.md-typeset table th:last-child,
+.md-typeset table td:last-child {
+  min-width: 200px;
+  max-width: 400px;
+  word-break: break-word;
+}
+
+/* Reduce el tamaño de fuente solo en las tablas de la documentación */
+.md-typeset table {
+  font-size: 0.92em;
+}
+
+/* Reduce el padding de las celdas de las tablas */
+.md-typeset table th,
+.md-typeset table td {
+  padding: 1px 1px;
+}
+
+/* Hace que las tablas ocupen el 100% del ancho disponible */
+.md-typeset table {
+  width: 100% !important;
+  table-layout: auto;
+}
+
+/* Haz que el contenido principal use casi todo el ancho disponible */
+.md-grid {
+  max-width: 98vw !important; /* O usa 100vw si quieres ocupar todo el ancho */
+}
+
+/* Elimina el margen izquierdo del sidebar y lo pega al borde */
+.md-sidebar {
+  left: 0 !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Pega la tabla de contenidos (toc) al borde derecho */
+.md-sidebar--secondary {
+  right: 0 !important;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Opcional: ajusta el área principal para que no quede espacio */
+/* .md-main__inner {
+  margin-left: 0 !important;
+} */
+
+/* Estilos mejorados para admonitions en MkDocs */
+.md-typeset .admonition {
+    width: 100%;
+    max-width: 100%;
+    margin: 1em 0;
+    padding: 0;
+    border-left: 0.2rem solid var(--md-primary-fg-color);
+    border-radius: 0.2rem;
+    box-shadow: none;
+    overflow: visible;
+    background-color: var(--md-default-bg-color);
+}
+
+.md-typeset .admonition .admonition-title {
+    margin: 0;
+    padding: 0.6rem 1rem;
+    border-bottom: none;
+    background-color: rgba(110, 33, 122, 0.1); /* Morado Footloose con transparencia */
+    font-weight: 700;
+    position: relative;
+}
+
+.md-typeset .admonition > .admonition-title:before {
+    background-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .admonition-content {
+    padding: 0.8rem 1rem;
+}
+
+/* Estilos para contenido dentro del admonition */
+.md-typeset .admonition p,
+.md-typeset .admonition ul,
+.md-typeset .admonition ol {
+    margin: 0.5em 0;
+    line-height: 1.6;
+}
+
+.md-typeset .admonition pre {
+    background-color: var(--md-code-bg-color);
+    border-radius: 0.2rem;
+    padding: 0.8rem !important;
+    margin: 0.8rem 0 !important;
+    overflow: auto;
+    width: calc(100% - 1.6rem);
+}
+
+.md-typeset .admonition table {
+    width: 100%;
+    margin: 1rem 0;
+    display: table;
+    border-collapse: collapse;
+}
+
+.md-typeset .admonition table th,
+.md-typeset .admonition table td {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .admonition table th {
+    background-color: rgba(110, 33, 122, 0.1); /* Morado Footloose con transparencia */
+}
+
+/* Estilos para bloques de código */
+.md-typeset .admonition code {
+    font-size: 0.85em;
+    word-break: break-word;
+    background-color: rgba(0,0,0,.05);
+    padding: 0.2em 0.4em;
+    border-radius: 0.2rem;
+}
+
+.md-typeset .admonition pre code {
+    display: block;
+    padding: 0;
+    background: transparent;
+    line-height: 1.5;
+    color: var(--md-code-fg-color);
+}
+
+/* Títulos dentro del admonition */
+.md-typeset .admonition h1,
+.md-typeset .admonition h2,
+.md-typeset .admonition h3,
+.md-typeset .admonition h4 {
+    margin: 1rem 0 0.5rem 0;
+    color: var(--md-primary-fg-color);
+}
+
+/* Líneas divisorias */
+.md-typeset .admonition hr {
+    margin: 1rem 0;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Ajuste para listas */
+.md-typeset .admonition ul,
+.md-typeset .admonition ol {
+    padding-left: 1.5rem;
+}
+
+/* Mantener el estilo de los enlaces */
+.md-typeset .admonition a {
+    color: var(--md-typeset-a-color);
+}
