@@ -84,14 +84,7 @@
   border-radius: 4px;
   display: inline-block;
 }
-.estado-desarrollado {
-  background-color: #d1ecf1;
-  color: #0c5460;
-  padding: 4px 8px;
-  border-radius: 4px;
-  display: inline-block;
-}
-.estado-implementado {
+.estado-completado {
   background-color: #d4edda;
   color: #155724;
   padding: 4px 8px;
@@ -202,10 +195,7 @@
   margin-left: 0 !important;
 } */
 
-/* ================================
-   ESTILOS MEJORADOS PARA ADMONITIONS
-   ================================ */
-
+/* Estilos mejorados para admonitions en MkDocs */
 .md-typeset .admonition {
     width: 100%;
     max-width: 100%;
@@ -213,7 +203,7 @@
     padding: 0;
     border-left: 0.2rem solid var(--md-primary-fg-color);
     border-radius: 0.2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: none;
     overflow: visible;
     background-color: var(--md-default-bg-color);
 }
@@ -222,7 +212,7 @@
     margin: 0;
     padding: 0.6rem 1rem;
     border-bottom: none;
-    background-color: rgba(110, 33, 122, 0.1);
+    background-color: rgba(110, 33, 122, 0.1); /* Morado Footloose con transparencia */
     font-weight: 700;
     position: relative;
 }
@@ -233,77 +223,9 @@
 
 .md-typeset .admonition-content {
     padding: 0.8rem 1rem;
-    width: 100%;
-    box-sizing: border-box;
 }
 
-/* ================================
-   BLOQUES DE CÓDIGO EN ADMONITIONS - ANCHO COMPLETO
-   ================================ */
-
-/* Contenedor pre dentro de admonitions - Ancho máximo */
-.md-typeset .admonition pre {
-    background-color: var(--md-code-bg-color) !important;
-    border: 1px solid rgba(110, 33, 122, 0.2) !important;
-    border-radius: 0.3rem !important;
-    padding: 1rem !important;
-    margin: 0.8rem 0 !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    font-family: 'Courier New', Consolas, 'Liberation Mono', Menlo, monospace !important;
-    font-size: 0.9em !important;
-    line-height: 1.4 !important;
-    white-space: pre !important;
-    word-wrap: normal !important;
-}
-
-/* Código dentro del pre en admonitions */
-.md-typeset .admonition pre code {
-    display: block !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    color: var(--md-code-fg-color) !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
-    line-height: inherit !important;
-    white-space: pre !important;
-    word-break: normal !important;
-    word-wrap: normal !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: visible !important;
-}
-
-/* Scrollbar personalizada para bloques de código */
-.md-typeset .admonition pre::-webkit-scrollbar {
-    height: 8px;
-}
-
-.md-typeset .admonition pre::-webkit-scrollbar-track {
-    background: rgba(110, 33, 122, 0.1);
-    border-radius: 4px;
-}
-
-.md-typeset .admonition pre::-webkit-scrollbar-thumb {
-    background: rgba(110, 33, 122, 0.4);
-    border-radius: 4px;
-}
-
-.md-typeset .admonition pre::-webkit-scrollbar-thumb:hover {
-    background: rgba(110, 33, 122, 0.6);
-}
-
-/* ================================
-   OTROS ELEMENTOS EN ADMONITIONS
-   ================================ */
-
-/* Párrafos y listas */
+/* Estilos para contenido dentro del admonition */
 .md-typeset .admonition p,
 .md-typeset .admonition ul,
 .md-typeset .admonition ol {
@@ -311,13 +233,20 @@
     line-height: 1.6;
 }
 
-/* Tablas en admonitions */
+.md-typeset .admonition pre {
+    background-color: var(--md-code-bg-color);
+    border-radius: 0.2rem;
+    padding: 0.8rem !important;
+    margin: 0.8rem 0 !important;
+    overflow: auto;
+    width: calc(100% - 1.6rem);
+}
+
 .md-typeset .admonition table {
     width: 100%;
     margin: 1rem 0;
     display: table;
     border-collapse: collapse;
-    table-layout: auto;
 }
 
 .md-typeset .admonition table th,
@@ -327,27 +256,24 @@
 }
 
 .md-typeset .admonition table th {
-    background-color: rgba(110, 33, 122, 0.1);
+    background-color: rgba(110, 33, 122, 0.1); /* Morado Footloose con transparencia */
 }
 
-/* Código inline en admonitions */
+/* Estilos para bloques de código */
 .md-typeset .admonition code {
     font-size: 0.85em;
     word-break: break-word;
-    background-color: rgba(110, 33, 122, 0.1);
-    color: var(--md-primary-fg-color);
+    background-color: rgba(0,0,0,.05);
     padding: 0.2em 0.4em;
     border-radius: 0.2rem;
-    font-family: 'Courier New', Consolas, 'Liberation Mono', monospace;
 }
 
-/* Asegurar que el código inline no afecte al código en bloques pre */
 .md-typeset .admonition pre code {
-    background-color: transparent !important;
-    color: var(--md-code-fg-color) !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    font-size: inherit !important;
+    display: block;
+    padding: 0;
+    background: transparent;
+    line-height: 1.5;
+    color: var(--md-code-fg-color);
 }
 
 /* Títulos dentro del admonition */
@@ -374,34 +300,4 @@
 /* Mantener el estilo de los enlaces */
 .md-typeset .admonition a {
     color: var(--md-typeset-a-color);
-}
-
-/* ================================
-   MEJORAS ADICIONALES PARA LEGIBILIDAD
-   ================================ */
-
-/* Mejor contraste para el modo oscuro */
-[data-md-color-scheme="slate"] .md-typeset .admonition pre {
-    background-color: #2d2d2d !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-[data-md-color-scheme="slate"] .md-typeset .admonition pre code {
-    color: #f8f8f2 !important;
-}
-
-/* Espaciado mejorado para múltiples bloques de código */
-.md-typeset .admonition pre + pre {
-    margin-top: 1.5rem !important;
-}
-
-/* Estilo especial para bloques de código SQL */
-.md-typeset .admonition pre code[class*="language-sql"],
-.md-typeset .admonition pre code[class*="sql"] {
-    color: #0066cc !important;
-}
-
-[data-md-color-scheme="slate"] .md-typeset .admonition pre code[class*="language-sql"],
-[data-md-color-scheme="slate"] .md-typeset .admonition pre code[class*="sql"] {
-    color: #66b3ff !important;
 }

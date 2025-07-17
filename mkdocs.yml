@@ -61,6 +61,8 @@ extra:
       link: https://fosstodon.org/@squidfunk
 
 extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - assets/js/tablesort.js
   - assets/js/mermaid-export.js
 
 # extra_javascript:
@@ -120,6 +122,26 @@ nav:
               - Entidades modificadas: proyectos/mejora-sp-vdm/documentos-tecnicos/entidades-modificadas.md
               - Lista de Comprobación de Pruebas: proyectos/mejora-sp-vdm/documentos-tecnicos/lista-mejoras.md
               - Documentos de Pase a Producción: proyectos/mejora-sp-vdm/documentos-tecnicos/pase-produccion.md
+      - Mejora SP COMPRAS:
+          - Indice: proyectos/mejora-sp-compras/index.md
+          - Proyecto: proyectos/mejora-sp-compras/Proyecto_Mejora_ETL_sp_compras.md
+          - Descripción: proyectos/mejora-sp-compras/descripcion.md
+          - Documentos Técnicos:
+              - SP actual: proyectos/mejora-sp-compras/documentos-tecnicos/sp_compras.md
+              - SP nuevo: proyectos/mejora-sp-compras/documentos-tecnicos/usp_etl_cargar_proveedores_modelos.md
+      - Optimizar ETL Carga Ventas:
+          - Descripción: proyectos/optimizar-etl-carga-ventas-diarias/descripcion.md
+          - Avances: proyectos/optimizar-etl-carga-ventas-diarias/avances.md
+          - Documentos Técnicos:
+              - ETL carga de ventas: proyectos/optimizar-etl-carga-ventas-diarias/documentos-tecnicos/ETL_Migra_VentasDiarias.md
+              - ETL carga de ventas con Metadatos: proyectos/optimizar-etl-carga-ventas-diarias/documentos-tecnicos/ETL_actualizar_ventas_con_metadato.md
+              - ETL actualiza cubo de ventas: proyectos/optimizar-etl-carga-ventas-diarias/documentos-tecnicos/ETL_Actualiza_Cubo_VentasDiarias.md
+              - FN nuevos: proyectos/optimizar-etl-carga-ventas-diarias/documentos-tecnicos/fn-nuevos.md
+              - SP nuevos: proyectos/optimizar-etl-carga-ventas-diarias/documentos-tecnicos/sp-nuevos.md
+              - Entidades nuevas: proyectos/optimizar-etl-carga-ventas-diarias/documentos-tecnicos/entidades-nuevas.md
+              - Entidades modificadas: proyectos/optimizar-etl-carga-ventas-diarias/documentos-tecnicos/entidades-modificadas.md
+              - Lista de Comprobación de Pruebas: proyectos/optimizar-etl-carga-ventas-diarias/documentos-tecnicos/lista-mejoras.md
+              - Documentos de Pase a Producción: proyectos/optimizar-etl-carga-ventas-diarias/documentos-tecnicos/pase-produccion.md
 
   - Servicios:
       - Catálogo de Servicios: servicios/catalogo.md
@@ -172,4 +194,7 @@ nav:
 
 plugins:
   - search
+  # - pdf-export:
+  #     verbose: true
+  #     combined: true
 #   - mermaid2
